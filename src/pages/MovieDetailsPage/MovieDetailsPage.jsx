@@ -5,6 +5,8 @@ import { useEffect, useRef } from 'react';
 import BackBtn from '../../components/BackBtn/BackBtn';
 import MovieDetail from '../../components/MovieDetail/MovieDetail';
 import css from './MovieDetailsPage.module.css';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -19,8 +21,8 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      {error && <p>{error.message}</p>}
-      {loading && <p>LOADING...</p>}
+      {error && <ErrorMessage message={error.message} />}
+      {loading && <Loader />}
       {!error && !loading && data && (
         <div>
           <BackBtn location={ref} />

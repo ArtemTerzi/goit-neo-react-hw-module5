@@ -4,6 +4,8 @@ import SearchForm from '../../components/SearchForm/SearchForm';
 import { useEffect } from 'react';
 import { useFetchAsync } from '../../hooks/useFetchAsync';
 import { getMovieByQuery } from '../../api/tmbd';
+import Loader from '../../components/Loader/Loader';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,8 +30,8 @@ const MoviesPage = () => {
   return (
     <div>
       <SearchForm handleSubmit={handleSubmit} />
-      {loading && <div>LOADING ...</div>}
-      {error && <p>{error.message}</p>}
+      {loading && <Loader />}
+      {error && <ErrorMessage message={error.message} />}
       {movies.length > 0 && !error && !loading && <MovieList items={movies} />}
     </div>
   );

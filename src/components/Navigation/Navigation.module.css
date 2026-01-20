@@ -11,6 +11,10 @@
   margin-bottom: 30px;
 }
 
+.nav a[class*='active'] {
+  color: #ffd700;
+}
+
 .navLink {
   color: #fff;
   text-decoration: none;

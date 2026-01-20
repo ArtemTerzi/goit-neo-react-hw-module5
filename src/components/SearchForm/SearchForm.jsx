@@ -1,4 +1,3 @@
-import { useSearchParams } from 'react-router';
 import css from './SearchForm.module.css';
 
 const SearchForm = ({ handleSubmit }) => {

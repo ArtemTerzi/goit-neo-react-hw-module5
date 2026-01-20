@@ -3,6 +3,8 @@ import { useFetchAsync } from '../../hooks/useFetchAsync';
 import { getMovieCast } from '../../api/tmbd';
 import { useEffect } from 'react';
 import css from './MovieCast.module.css';
+import Loader from '../Loader/Loader';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const MovieCast = () => {
   const { movieId } = useParams();
@@ -13,8 +15,8 @@ const MovieCast = () => {
     execute(movieId);
   }, [execute, movieId]);
 
-  if (loading) return <p>LOADING...</p>;
-  if (error) return <p>{error.message}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorMessage message={error.message} />;
 
   return (
     <div>

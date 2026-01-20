@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(255, 77, 77, 0.1);
+  border: 1px solid #ff4d4d;
+  border-radius: 12px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.text {
+  color: #ff4d4d;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}

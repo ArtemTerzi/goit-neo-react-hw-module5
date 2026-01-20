@@ -3,6 +3,8 @@ import { useParams } from 'react-router';
 import { useFetchAsync } from '../../hooks/useFetchAsync';
 import { getMovieReviews } from '../../api/tmbd';
 import css from './MovieReviews.module.css';
+import Loader from '../Loader/Loader';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 const MovieReviews = () => {
   const { movieId } = useParams();
@@ -15,8 +17,8 @@ const MovieReviews = () => {
     execute(movieId);
   }, [execute, movieId]);
 
-  if (loading) return <p>LOADING...</p>;
-  if (error) return <p>{error.message}</p>;
+  if (loading) return <Loader />;
+  if (error) return <ErrorMessage message={error.message} />;
 
   return (
     <div>
