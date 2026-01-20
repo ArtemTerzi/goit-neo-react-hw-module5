@@ -1,0 +1,35 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.castItem {
+  background: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  width: 150px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.castItem:hover {
+  transform: translateY(-5px);
+}
+
+.castItem img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.castItem p {
+  color: #fff;
+  font-size: 14px;
+  margin: 2px 0;
+}

@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  gap: 30px;
+  padding: 20px 40px;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink.active {
+  color: #ffd700;
+}
+
+.navLink:hover {
+  color: #ffec99;
+}
